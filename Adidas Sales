@@ -1,0 +1,52 @@
+-- Adidas Sales Analysis
+
+-- Verify table uploaded correctly
+select *
+from adidas_sales.adidas_sales
+
+select retailer, retailer_id, invoice_date, state, city, product, units_sold, total_sales
+from adidas_sales.adidas_sales
+
+-- Highest sales in Ohio
+select retailer, retailer_id, invoice_date, state, city, product, units_sold, total_sales
+from adidas_sales.adidas_sales
+where state = "Ohio"
+order by total_sales desc
+
+-- Sales information for most profitable states
+select retailer, retailer_id, invoice_date, state, city, product, units_sold, total_sales
+from adidas_sales.adidas_sales
+where state = "California"
+order by total_sales desc
+
+select retailer, retailer_id, invoice_date, state, city, product, units_sold, total_sales
+from adidas_sales.adidas_sales
+where state = "Texas"
+order by total_sales desc
+
+select retailer, retailer_id, invoice_date, state, city, product, units_sold, total_sales
+from adidas_sales.adidas_sales
+where state = "New York"
+order by total_sales desc
+
+select retailer, retailer_id, invoice_date, state, city, product, units_sold, total_sales
+from adidas_sales.adidas_sales
+where state = "Florida"
+order by total_sales desc
+
+-- Sales information for most profitable retailer
+select retailer, retailer_id, invoice_date, state, city, product, units_sold, total_sales
+from adidas_sales.adidas_sales
+order by total_sales desc, retailer
+
+-- Most profitable day in 2020
+select retailer, retailer_id, invoice_date, state, city, product, units_sold, total_sales
+from adidas_sales.adidas_sales
+where invoice_date < "2020-12-31"
+order by total_sales desc
+
+-- Most profitable day in 2021
+select retailer, retailer_id, invoice_date, state, city, product, units_sold, total_sales
+from adidas_sales.adidas_sales
+where invoice_date > "2020-12-31"
+order by total_sales desc
